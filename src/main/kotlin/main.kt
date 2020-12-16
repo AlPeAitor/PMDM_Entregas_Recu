@@ -1,9 +1,17 @@
+import java.util.*
 import kotlin.random.*
+import kotlin.random.Random
 
 fun main(args: Array<String>) {
 
-    print("Introduzca un numero: ")
-    var numero : Int = Integer.valueOf(readLine())
+    print("Introduzca un número: ")
+
+    val sc = Scanner(System.`in`)
+    while (!sc.hasNextInt()) {
+        System.out.println("Introduzca un número: ");
+        sc.next()
+    }
+    var numero = sc.nextInt()
 
     //Parte del cuadrado
     if (esPar(numero)){
