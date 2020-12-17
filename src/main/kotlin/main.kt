@@ -7,27 +7,27 @@ fun main(args: Array<String>) {
 
     val sc = Scanner(System.`in`)
     while (!sc.hasNextInt()) {
-        System.out.print("Introduzca un número: ");
+        System.out.print("Introduzca un número: ")
         sc.next()
     }
-    var numero = sc.nextInt()
+    val x = sc.nextInt()
 
     //Parte del cuadrado
-    if (esPar(numero)){
-        if(numero!=0) {
+    if (esPar(x)){
+        if(x!=0) {
 
-            repeat(numero){
+            repeat(x){
                 print(" — ")
             }
             println()
-            repeat(numero){
+            repeat(x){
                 print("|")
-                repeat(numero){
+                repeat(x){
                     print("   ")   //parece que con 3 espacios se queda la forma del cuadrado mas consistente, comprobado con valores de 2 hasta 24
                 }
                 println("|")
             }
-            repeat(numero) {
+            repeat(x) {
                 print(" — ")
             }
         }
@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
 
         //Parte de la lista
 
-        val lista = List(numero*5) { Random.nextInt(1,100) }
+        val lista = List(x*5) { Random.nextInt(1,100) }
         print("Elementos: ")
         println(lista)
 
